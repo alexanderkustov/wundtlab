@@ -1,0 +1,35 @@
+
+<% @studies.each do |study| %>
+  
+    
+    <%= study.description %>
+    <%= study.study_link %>
+    <%= link_to 'Show', study %>
+    <%= link_to 'Edit', edit_study_path(study) %>
+    <%= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+<br />
+<div class="col-lg-3">
+<div class="cover" style="background-image: url('http://static.gibbon.co/thumbnails/9b/7f/9b7fd9ffed2aa93da0d84eb8bb623e1e.jpg');">
+          <a href="/wdeb/better-designer">
+            <hgroup>
+            <h2><%= study.description %></h2>
+            <h3><i class="serif">By</i> Wouter de Bres</h3>
+            </hgroup>
+            <ul class="flow-numbers">
+              <li class="tip" original-title="Students">
+              <span class="icon"></span>183
+              </li>
+              <li class="tip" original-title="Drops">
+              <span class="icon">💧</span>34
+              </li>
+            </ul>
+          </a>
+        </div>
+
+</div>
+<% end %>
+<br />
+
+<%= link_to 'New Study', new_study_path %>

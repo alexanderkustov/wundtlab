@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.cover {
+min-height: 320px;
+background-color: #ddd;
+background-size: cover;
+position: relative;
+-moz-box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
+-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
+box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
+-webkit-border-radius: 1px 6px 6px 1px;
+-moz-border-radius: 1px 6px 6px 1px;
+border-radius: 1px 6px 6px 1px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+
+.cover a:hover {
+background: rgba(0,0,0,0.25);
+}
+flowsmedia="screen"
+.cover a {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+-webkit-border-radius: 0px 6px 6px 0px;
+-moz-border-radius: 0px 6px 6px 0px;
+border-radius: 0px 6px 6px 0px;
+-moz-box-shadow: inset 4px 0 0 rgba(0, 0, 0, 0.25);
+-webkit-box-shadow: inset 4px 0 0 rgba(0, 0, 0, 0.25);
+box-shadow: inset 4px 0 0 rgba(0, 0, 0, 0.25);
+background: rgba(0,0,0,0.2);
+-webkit-transition: 0.15s linear;
+-moz-transition: 0.15s linear;
+-o-transition: 0.15s linear;
+-ms-transition: 0.15s linear;
+transition: 0.15s linear;
+-webkit-transition: background 0.1s linear;
+-moz-transition: background 0.1s linear;
+-o-transition: background 0.1s linear;
+-ms-transition: background 0.1s linear;
+transition: background 0.1s linear;
+}
+
+
+.cover hgroup {
+border: 5px solid #fff;
+background-color: rgba(255,255,255,0.96);
+margin: 20px;
+padding: 10px;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+position: relative;
+z-index: 300;
+overflow: hidden;
+}
+
+.cover a hgroup h2 {
+color: #222;
+font-size: 1.6em;
+font-weight: 200;
+margin-bottom: .6em;
+letter-spacing: -1px;
+}
+
+.cover a hgroup h3 {
+font-weight: 600;
+font-size: .75em;
+margin-bottom: 0.5em;
+color: #999;
+}
+
+ul.flow-numbers {
+position: absolute;
+bottom: 12px;
+right: 21px;
+left: 21px;
+z-index: 1000;
+}
+
+ul.flow-numbers li {
+float: left;
+font-size: .8em;
+font-weight: 700;
+margin: 0 20px 0 0;
+color: #fff;
+}
