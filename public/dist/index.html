@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Cache-Control" content="max-age=0">
@@ -9,11 +9,15 @@
 		<meta http-equiv="Pragma" content="no-cache">
 		<title>Strut - Beta</title>
 		<link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" type="text/css" href="styles/built.css">
+
+		<!-- can't build this in due to font imports -->
+		<link rel="stylesheet" href="preview_export/css/themes/default.css">
+
+		<link rel="shortcut icon" href="img/strut-icon.png">
+		<link rel="apple-touch-icon-precomposed" href="img/strut-touch.png">
 		<script type="text/javascript" src="preview_export/download_assist/swfobject.js"></script>
-		
 	</head>
-	<body>
+	<body class="bg-default">
 		<!--[IF IE]>
 			<div class="container">
 			<div class="alert alert-success">
@@ -108,7 +112,7 @@
 			}
 		}
 		</script>
-		<script data-main="scripts/amd-app" src="scripts/vendor/require.js"></script>
+		<script data-main="scripts/amd-app" src="scripts/libs/require.js"></script>
 		<div id="modals">
 		</div>
 	</body>

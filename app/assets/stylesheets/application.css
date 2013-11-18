@@ -22,6 +22,14 @@ min-height: 320px;
 background-color: #ddd;
 background-size: cover;
 position: relative;
+background: #ffaf4b; /* Old browsers */
+background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffaf4b), color-stop(100%,#ff920a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffaf4b 0%,#ff920a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */
 -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
 -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
 box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.4), 3px 3px 7px rgba(0,0,0,.09);
@@ -107,4 +115,16 @@ font-size: .8em;
 font-weight: 700;
 margin: 0 20px 0 0;
 color: #fff;
+}
+.navbar-brand {
+	padding:0;
+}
+
+.navbar-inverse{
+	background: #f6a723;
+	border-bottom: 1px solid #f6a723; 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #333;
 }
