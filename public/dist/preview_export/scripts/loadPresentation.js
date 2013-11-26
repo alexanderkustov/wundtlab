@@ -1,56 +1,42 @@
-//ORIGNAL
-
-/*
 var loadPresentation = function() {
-        var presentation = localStorage.getItem('preview-string');
-        var config = JSON.parse(localStorage.getItem('preview-config'));
+//sacar o caminho do ficheiro nos uploads
+var newURL = document.URL;
+var apresentacao = newURL.split('#');
+var presentation = apresentacao[1];
+//se no caminho tiver a pasta uploads, faz load normal, else faz load de local storage
+if(presentation.indexOf("uploads") !== -1)
+{
 
-        if (presentation) {
-                document.body.innerHTML = presentation;
-        //        document.body.className = config.surface + " " + document.body.className;
-        }
-};
-*/
-
-var loadPresentation = function() {
-
-	var newURL = document.URL;
-	var apresentacao = newURL.split('#');
-
-	//caminho da apresentacao
-	//console.log(apresentacao[1]);
-
-	var presentation = apresentacao[1];
-	//need to get content of this file
-
-	var resultado = $.ajax({
+//pedir o conteudo
+var resultado = $.ajax({
 	url : presentation,
-		success : function(result){
-			async: false,
-			paraprocessar = result;
+	success : function(result){
+		async: false,
+		paraprocessar = result;
+	}
+});
 
-		}
-	});
+//por o conteudo no innerHTML
+$.when( resultado ).done(function(){
 
+//substrining
+var html = paraprocessar;
+var init = html.indexOf("<body>");
+var end = html.indexOf("</body>");
+var conteudo = html.substring(init,end);
+console.log(conteudo);
 
-	$.when( resultado ).done(function(){
+document.body.innerHTML = conteudo;
+});
 
-	var html = paraprocessar;
-	var init = html.indexOf("<body>");
-	var end = html.indexOf("</body>");
-	var conteudo = html.substring(init,end);
-
-	console.log("!!!SUBSTRING!!!!!!!!!");
-	console.log(conteudo);
-	console.log("!!!FINAL!!!!!!!!!");
-		document.body.innerHTML = conteudo;
-	});
-
-	//var presentation = localStorage.getItem(apresentacao[1]);
-	//var presentation = localStorage.getItem('preview-string');
-	//var config = JSON.parse(localStorage.getItem('preview-config'));
- 
-
-	//	document.body.className = config.surface + " " + document.body.className;
+} else {
+	//Funcao original do strut para load de localstorage
+	var presentation = localStorage.getItem('preview-string');
+	var config = JSON.parse(localStorage.getItem('preview-config'));
+	if (presentation) {
+		document.body.innerHTML = presentation;
+//        document.body.className = config.surface + " " + document.body.className;
+}
+}
 
 };
