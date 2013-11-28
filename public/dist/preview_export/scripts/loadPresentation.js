@@ -27,6 +27,7 @@ var conteudo = html.substring(init,end);
 console.log(conteudo);
 
 document.body.innerHTML = conteudo;
+
 });
 
 } else {
@@ -35,8 +36,8 @@ document.body.innerHTML = conteudo;
 	var config = JSON.parse(localStorage.getItem('preview-config'));
 	if (presentation) {
 		document.body.innerHTML = presentation;
-//        document.body.className = config.surface + " " + document.body.className;
-}
+		//document.body.className = config.surface + " " + document.body.className;
+	}
 }
 
 };
