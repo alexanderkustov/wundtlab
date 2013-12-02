@@ -6,6 +6,9 @@
 * http://mit-license.org/markdalgleish
 */
 (function(moduleName, window) {
+
+	var clicks = new Array();
+	
 	var from = function(selectorOrElement, selectedPlugins) {
 		var parent = selectorOrElement.blur ? selectorOrElement : document.querySelector(selectorOrElement),
 		slides = [].slice.call(parent.children, 0),
@@ -108,7 +111,7 @@
 
 //mouse down positioning and counting method
 deck.parent.addEventListener('mousedown', function(e) {
-	var clicks = new Array();
+	
 	
 		//console.log($(e.target).parent().parent().parent().attr('class'));
 		if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
@@ -126,17 +129,19 @@ deck.parent.addEventListener('mousedown', function(e) {
 });
 document.addEventListener('keydown', function(e) {
 	(
-e.which == 34 || // PAGE DOWN
-e.which == 32 || // SPACE
-axis == 'X' && e.which == 39 || // RIGHT
-axis == 'Y' && e.which == 40 // BOTTOM
-) && deck.next();
-	(
-e.which == 33 || // PAGE UP
-axis == 'X' && e.which == 37 || // LEFT
-axis == 'Y' && e.which == 38 // TOP
-) && deck.prev();
-});
+		e.which == 34 || // PAGE DOWN
+		e.which == 32 || // SPACE
+		axis == 'X' && e.which == 39 || // RIGHT
+		axis == 'Y' && e.which == 40 // BOTTOM
+		) && deck.next();
+			(
+		e.which == 33 || // PAGE UP
+		axis == 'X' && e.which == 37 || // LEFT
+		axis == 'Y' && e.which == 38 // TOP
+		) && deck.prev();
+
+	});
+
 //touchevents
 deck.parent.addEventListener('touchstart', function(e) {
 	if (e.touches.length == 1) {
