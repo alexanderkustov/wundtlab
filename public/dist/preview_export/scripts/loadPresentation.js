@@ -21,7 +21,7 @@ $.when( resultado ).done(function(){
 
 //substrining
 var html = paraprocessar;
-var init = html.indexOf("<body>");
+var init = html.indexOf("<div id=\"main\" class=\" strut-surface \">");
 var end = html.indexOf("</body>");
 var conteudo = html.substring(init,end);
 console.log(conteudo);

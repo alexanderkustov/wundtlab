@@ -54,13 +54,14 @@
 	}
 	</style>
 
-	<script src="scripts/onready.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="scripts/loadPresentation.js"></script>
-	<script src="bespoke/scripts/bespoke.js"></script>
-		<script src="bespoke/scripts/bespoke-plugins.js"></script>
-
-	<script>
+	<script async=false defer=false src="scripts/onready.js"></script>
+	<script async=false defer=false src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script async=false defer=false src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script async=false defer=false src="scripts/loadPresentation.js" ></script>
+	<script async=false defer=false src="bespoke/scripts/bespoke.js" ></script>
+	<script async=false defer=false src="bespoke/scripts/bespoke-plugins.js" ></script>
+	<script async=fasle defer=false>
+	console.log("gonna load from");
 	ready(function() {
 		if (document.getElementById('launched-placeholder'))
         	loadPresentation();
@@ -72,6 +73,7 @@
 		}
 	});
 	</script>
+	
 </head>
 <body>
 	<div id="launched-placeholder"></div>
