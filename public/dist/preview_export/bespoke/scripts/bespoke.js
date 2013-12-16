@@ -8,16 +8,21 @@
 (function(moduleName, window) {
 
 	var clicks = new Array();
-	
+
 	var from = function(selectorOrElement, selectedPlugins) {
+
+		console.log(selectorOrElement);
+
 		var parent = selectorOrElement.blur ? selectorOrElement : document.querySelector(selectorOrElement),
-		slides = [].slice.call(parent.children, 0),
+		slides = [].slice.call( parent.children, 0),
 		activeSlide = slides[0],
 		listeners = {},
 		activate = function(index, customData) {
 			if (!slides[index]) {
 				return;
 			}
+			console.log(parent.children);
+			console.log(slides);
 			fire('deactivate', createEventData(activeSlide, customData));
 			activeSlide = slides[index];
 			slides.map(deactivate);
@@ -111,15 +116,13 @@
 
 //mouse down positioning and counting method
 deck.parent.addEventListener('mousedown', function(e) {
-	
-	
+
 		//console.log($(e.target).parent().parent().parent().attr('class'));
 		if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
 			//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
 			clicks.push($(e.target).parent().parent().parent().attr('class'));
 			deck.next();
 
-			
 			//preciso de saber o ultimo slide para mostrar quantas vezes as classes clicadas foram accionadas
 			console.log("SLIDE NUMBER: " + "" + "of: " +  deck.slides.length );
 			console.log("cenas na array: " + clicks.toString());
