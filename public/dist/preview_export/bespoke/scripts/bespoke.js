@@ -14,7 +14,7 @@
 		console.log(selectorOrElement);
 
 		var parent = selectorOrElement.blur ? selectorOrElement : document.querySelector(selectorOrElement),
-		slides = [].slice.call( parent.children, 0),
+		slides = [].slice.call( document.querySelector('article').children, 0),
 		activeSlide = slides[0],
 		listeners = {},
 		activate = function(index, customData) {
