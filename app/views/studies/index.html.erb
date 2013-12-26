@@ -6,9 +6,7 @@
 <div class="cover">
           <a href="<%= study.study_link %>">
             <hgroup>
-         
             <h2> <%= study.name %></h2>
-
             <h3><i class="serif">By</i> AuthorName</h3>
             </hgroup>
             <ul class="flow-numbers">
@@ -21,8 +19,11 @@
             </ul>
           </a>
         </div>
-        
-    <%= study.description %>
+    <%= study.description %><br>
+    <p>
+  <b>Study link:</b>
+  <a href="/dist/preview_export/bespoke.html#<%= study.presentation %>">adasdsad</a>
+</p>
    
 <%= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
