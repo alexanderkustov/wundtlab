@@ -24,9 +24,10 @@ var html = paraprocessar;
 var init = html.indexOf("<div id=\"main\" class=\" strut-surface \">");
 var end = html.indexOf("</body>");
 var conteudo = html.substring(init,end);
+
 console.log(conteudo);
 
-document.body.innerHTML = conteudo;
+document.body.innerHTML = "<a onclick='start()' style='position:absolute; z-index:9999;'>START</a>" + conteudo;
 
 });
 

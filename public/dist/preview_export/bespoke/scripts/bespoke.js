@@ -130,6 +130,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 		}
 
 });
+
 document.addEventListener('keydown', function(e) {
 	(
 		e.which == 34 || // PAGE DOWN

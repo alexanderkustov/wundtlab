@@ -10,6 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="bespoke/css/themes.css" />
 	<link href='../styles/strut.themes/backgroundClasses.css' rel='stylesheet' type='text/css' />
 	<link href='../styles/strut.themes/surfaceClasses.css' rel='stylesheet' type='text/css' />
+	<script async=false defer=false src="scripts/onready.js"></script>
+	<script async=false defer=false src="scripts/loadPresentation.js" ></script>
+	<script type="text/javascript">
+    		function start() {
+bespoke.horizontal.from('article');
+}
+</script>
 
 	<style type="text/css">
 		.componentContainer {
@@ -56,16 +63,15 @@
 </head>
 <body>
 	<div id="launched-placeholder"></div>
-	<script async=false defer=false src="scripts/onready.js"></script>
-	<script async=false defer=false src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 	<script async=false defer=false src="bespoke/scripts/bespoke.js" ></script>
-	<script async=false defer=false src="scripts/loadPresentation.js" ></script>
 	<script>
 	ready(function() {
         	loadPresentation();
     		bespoke.horizontal.from('article');
+
+	//FUCK THIS JAVASCRIPT SHIT it needs to load only at the most bottom of this stupid shit...
 	});
-	//FUCK THIS JAVASCRIPT SHIT
 	</script>
 
 </body>
