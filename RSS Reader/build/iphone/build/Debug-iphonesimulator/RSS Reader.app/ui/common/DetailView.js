@@ -1,0 +1,1 @@
+/Users/knuxus/Documents/Titanium_Studio_Workspace/RSS Reader/Resources/ui/common/DetailView.js
