@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=RSS Reader
+iosLaunchConfigurationAttributes/appid=com.appcelerator.sample.rss
+iosLaunchConfigurationAttributes/certificate=Inspiring Code (F339D8FVE3)
+iosLaunchConfigurationAttributes/keychain=/Users/knuxus/Library/Keychains/login.keychain
+iosLaunchConfigurationAttributes/sdk_version=7.0.3
+iosLaunchConfigurationAttributes/uuid=4D8F5D2D-078A-4BC4-B39E-637AF98ABD9E
+provisioning_profiles/development/4D8F5D2D-078A-4BC4-B39E-637AF98ABD9E/appid=*
+provisioning_profiles/development/4D8F5D2D-078A-4BC4-B39E-637AF98ABD9E/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/4D8F5D2D-078A-4BC4-B39E-637AF98ABD9E/uuid=4D8F5D2D-078A-4BC4-B39E-637AF98ABD9E
+provisioning_profiles/development/D8E8C678-00D0-4606-88C2-F7ABD45E76E6/appid=com.inspiring.helloworld
+provisioning_profiles/development/D8E8C678-00D0-4606-88C2-F7ABD45E76E6/name=iOS Team Provisioning Profile\: com.inspiring.helloworld
+provisioning_profiles/development/D8E8C678-00D0-4606-88C2-F7ABD45E76E6/uuid=D8E8C678-00D0-4606-88C2-F7ABD45E76E6

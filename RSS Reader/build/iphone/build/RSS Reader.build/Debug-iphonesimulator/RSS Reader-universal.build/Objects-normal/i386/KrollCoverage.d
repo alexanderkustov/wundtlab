@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/knuxus/Documents/Titanium_Studio_Workspace/RSS\ Reader/build/iphone/Classes/KrollCoverage.m
+  /Users/knuxus/Documents/rails/wundtlab/RSS\ Reader/build/iphone/Classes/KrollCoverage.m

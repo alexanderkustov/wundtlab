@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/knuxus/Documents/Titanium_Studio_Workspace/RSS\ Reader/build/iphone/Classes/ApplicationMods.m \
-  /Users/knuxus/Documents/Titanium_Studio_Workspace/RSS\ Reader/build/iphone/Classes/ApplicationMods.h
+  /Users/knuxus/Documents/rails/wundtlab/RSS\ Reader/build/iphone/Classes/ApplicationMods.m \
+  /Users/knuxus/Documents/rails/wundtlab/RSS\ Reader/build/iphone/Classes/ApplicationMods.h

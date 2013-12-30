@@ -1,1 +1,1 @@
-/Users/knuxus/Documents/Titanium_Studio_Workspace/RSS Reader/Resources/ui/handheld/mobileweb/ApplicationWindow.js
+/Users/knuxus/Documents/rails/wundtlab/RSS Reader/Resources/ui/handheld/mobileweb/ApplicationWindow.js
