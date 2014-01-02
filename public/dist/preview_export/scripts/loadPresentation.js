@@ -27,7 +27,7 @@ var conteudo = html.substring(init,end);
 
 console.log(conteudo);
 
-document.body.innerHTML = "<a onclick='start()' style='position:absolute; z-index:9999;'>START</a>" + conteudo;
+document.body.innerHTML = "<a onclick='start()' class='startButton'>START</a>" + conteudo;
 
 });
 

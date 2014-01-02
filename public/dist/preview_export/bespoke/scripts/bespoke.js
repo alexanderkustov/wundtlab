@@ -120,12 +120,14 @@ deck.parent.addEventListener('mousedown', function(e) {
 		//console.log($(e.target).parent().parent().parent().attr('class'));
 		if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
 			//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
-			clicks.push($(e.target).parent().parent().parent().attr('class'));
+			clicks.push($(e.target).parent().parent().parent().attr('class') + " tempo: totalSeconds" );
+			//adicionar timer aqui
 			deck.next();
 
 			//preciso de saber o ultimo slide para mostrar quantas vezes as classes clicadas foram accionadas
 			console.log("SLIDE NUMBER: " + "" + "of: " +  deck.slides.length );
 			console.log("cenas na array: " + clicks.toString());
+
 
 		}
 
