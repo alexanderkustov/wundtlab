@@ -11,28 +11,46 @@
 	<link href='../styles/strut.themes/backgroundClasses.css' rel='stylesheet' type='text/css' />
 	<link href='../styles/strut.themes/surfaceClasses.css' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="../styles/custom.css">
-	<script async=false defer=false src="scripts/onready.js"></script>
-	<script async=false defer=false src="scripts/loadPresentation.js" ></script>
+
+
+	<script src="scripts/jquery.min.js" ></script>
+	<script src="scripts/LAB.min.js" ></script>
+
+	<script type="text/javascript">
+		$LAB
+		.script("scripts/onready.js").wait()
+		.script("scripts/loadPresentation.js").wait()
+
+		.script("bespoke/scripts/bespoke.js").wait(function(){
+			ready(function() {
+				loadPresentation();
+				bespoke.horizontal.from('article');
+				
+			});
+		});
+	</script>
+
 	<script type="text/javascript">
 		function start() {
-			bespoke.horizontal.from('article');
-			$(".startButton").hide();
-			// var totalSeconds = 0;
-        	// setInterval( function(){++sec;}, 1000);
-}
+			if(bespoke){
+				bespoke.horizontal.from('article');
+				$(".startButton").hide();
+				// var totalSeconds = 0;
+	        	// setInterval( function(){++sec;}, 1000);
+	        }
+	    }
+	</script>
+	<script>
+
+
 	</script>
 </head>
 <body>
 	<div id="launched-placeholder"></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
-	<script async=false defer=false src="bespoke/scripts/bespoke.js" ></script>
-	<script>
-		ready(function() {
-			loadPresentation();
-			bespoke.horizontal.from('article');
 
-		});
-	</script>
+
 
 </body>
+
+
 </html>

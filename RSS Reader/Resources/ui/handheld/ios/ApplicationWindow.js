@@ -10,9 +10,15 @@ function ApplicationWindow() {
 		detailView = new DetailView();
 
 	//create master view container
+	
+	var win = Titanium.UI.createWindow();
+
+	
 	var masterContainerWindow = Ti.UI.createWindow({
 		title: 'WundtLab'
 	});
+	masterContainerWindow.orientationModes = [Ti.UI.LANDSCAPE_RIGHT];
+	Ti.UI.orientation = [Ti.UI.LANDSCAPE_RIGHT];
 	var button = Ti.UI.createButton({
 		systemButton: Ti.UI.iPhone.SystemButton.REFRESH
 	});

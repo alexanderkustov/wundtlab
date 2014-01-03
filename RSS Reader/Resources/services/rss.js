@@ -1,5 +1,5 @@
 var osname = Ti.Platform.osname;
-var RSS_URL = osname === 'mobileweb' ? '/feed.xml' : 'http://localhost:3000/studies.rss';
+var RSS_URL = osname === 'mobileweb' ? '/feed.xml' : 'http://176.111.105.23:3000/studies.rss';
 var MONTH_MAP = {
 	JAN: 1,
 	FEB: 2,

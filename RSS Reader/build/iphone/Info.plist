@@ -10,6 +10,22 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>appicon.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>appicon.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.inspiring.wundtlab.pt</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.0.1388752116275</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -21,25 +37,13 @@
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleIdentifier</key>
-	<string>com.appcelerator.sample.rss</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.0</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.1.0</string>
+	<string>1.1.0.1388752116275</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIRequiresPersistentWiFi</key>
-	<false/>
 	<key>UIPrerenderedIcon</key>
+	<false/>
+	<key>UIRequiresPersistentWiFi</key>
 	<false/>
 	<key>UIStatusBarHidden</key>
 	<false/>
@@ -47,18 +51,13 @@
 	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleIconFiles</key>
+	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<string>appicon.png</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
