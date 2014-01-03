@@ -935,8 +935,8 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 		UIDevice *currentDevice = [UIDevice currentDevice];
 		NSString *currentLocaleIdentifier = [[NSLocale currentLocale] localeIdentifier];
 		NSString *currentDeviceInfo = [NSString stringWithFormat:@"%@/%@; %@; %@;",[currentDevice model],[currentDevice systemVersion],[currentDevice systemName],currentLocaleIdentifier];
-		NSString *kRSSReaderUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
-		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kRSSReaderUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
+		NSString *kWundtLabUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
+		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kWundtLabUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
 	}
 	return userAgent;
 }
@@ -1076,7 +1076,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
             errorString = [error localizedDescription];
         } else {
             // If we have no data...
-            // This should never happen on a RSSReader app using the node.js CLI
+            // This should never happen on a WundtLab app using the node.js CLI
             errorString = @"File not found";
         }
         if(errorString != nil) {

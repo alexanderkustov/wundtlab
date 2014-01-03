@@ -39,7 +39,7 @@ typedef enum {
 } EncodingError;
 
 /**
- RSSReader orientation flags.
+ WundtLab orientation flags.
  */
 typedef enum
 {

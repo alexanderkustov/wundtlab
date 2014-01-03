@@ -52,7 +52,7 @@
 @end
 
 /**
- Protocol for containment controller. Implemented by UIViewControllers that can host RSSReader Windows
+ Protocol for containment controller. Implemented by UIViewControllers that can host WundtLab Windows
  */
 @protocol TiControllerContainment <NSObject>
 @required

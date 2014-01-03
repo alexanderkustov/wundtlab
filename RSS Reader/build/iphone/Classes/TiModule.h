@@ -13,7 +13,7 @@
 @class TiHost;
 
 /**
- The base class for all RSSReader modules
+ The base class for all WundtLab modules
  */
 @interface TiModule : TiProxy 
 {
@@ -51,30 +51,30 @@
 // lifecycle
 
 /**
- RSSReader Platform calls this method on startup.
+ WundtLab Platform calls this method on startup.
  */
 -(void)startup;
 
 /**
- RSSReader Platform calls this method on shutdown.
+ WundtLab Platform calls this method on shutdown.
  @param sender The sender of the event.
  */
 -(void)shutdown:(id)sender;
 
 /**
- RSSReader Platform calls this method on suspend.
+ WundtLab Platform calls this method on suspend.
  @param sender The sender of the event.
  */
 -(void)suspend:(id)sender;
 
 /**
- RSSReader Platform calls this method on entering background.
+ WundtLab Platform calls this method on entering background.
  @param sender The sender of the event.
  */
 -(void)paused:(id)sender;
 
 /**
- RSSReader Platform calls this method on resume.
+ WundtLab Platform calls this method on resume.
  @param sender The sender of the event.
  */
 -(void)resume:(id)sender;

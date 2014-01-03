@@ -16,23 +16,23 @@
 {
 	switch (type)
 	{
-		case UIRSSReaderNativeItemInfoLight:
+		case UIWundtLabNativeItemInfoLight:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoLight];
 		}
-		case UIRSSReaderNativeItemInfoDark:
+		case UIWundtLabNativeItemInfoDark:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoDark];
 		}
-		case UIRSSReaderNativeItemDisclosure:
+		case UIWundtLabNativeItemDisclosure:
 		{
 			return [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 		}
-		case UIRSSReaderNativeItemContactAdd:
+		case UIWundtLabNativeItemContactAdd:
 		{
 			return [UIButton buttonWithType:UIButtonTypeContactAdd];
 		}
-		case UIRSSReaderNativeItemSpinner:
+		case UIWundtLabNativeItemSpinner:
 		{
 			UIActivityIndicatorView *button = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] autorelease];
 			[button startAnimating];

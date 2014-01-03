@@ -1,7 +1,7 @@
-ts	1388748151000
-Default-Landscape.jpg	36232
-Default-Portrait.jpg	28479
-Default.jpg	17184
+ts	1388759075000
+Default-Landscape.jpg	34446
+Default-Portrait.jpg	68972
+Default.jpg	7383
 app.js	1608
 appicon.png	19109
 appicon144.png	23341
@@ -9,7 +9,7 @@ apple-touch-icon-114x114-precomposed.png	15820
 apple-touch-icon-57x57-precomposed.png	6790
 apple-touch-icon-72x72-precomposed.png	8844
 apple-touch-icon-precomposed.png	6790
-apple_startup_images	36232
+apple_startup_images	34446
 favicon.ico	0
 feed.xml	301215
 images
@@ -17,12 +17,12 @@ images
 mobileweb
 	appicon.png	19109
 	apple_startup_images
-		Default-Landscape.jpg	36232
-		Default-Landscape.png	513333
-		Default-Portrait.jpg	28479
-		Default-Portrait.png	76153
-		Default.jpg	17184
-		Default.png	110858
+		Default-Landscape.jpg	34446
+		Default-Landscape.png	40921
+		Default-Portrait.jpg	68972
+		Default-Portrait.png	71945
+		Default.jpg	7383
+		Default.png	16089
 		README	492
 	splash
 		README	2040
@@ -31,7 +31,7 @@ mobileweb
 		splash.html	0
 		titanium.png	10902
 services
-	rss.js	1873
+	rss.js	1878
 themes
 	common.css	7479
 	default
@@ -196,7 +196,7 @@ ui
 		android
 			ApplicationWindow.js	2065
 		ios
-			ApplicationWindow.js	1328
+			ApplicationWindow.js	1485
 		mobileweb
 			ApplicationWindow.js	1499
 	tablet

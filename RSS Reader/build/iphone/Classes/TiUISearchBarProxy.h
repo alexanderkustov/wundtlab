@@ -27,7 +27,7 @@
 //	but is internal ONLY, and should NOT be used by javascript.
 @property(nonatomic,readwrite,assign) BOOL showsCancelButton;
 
-#pragma mark - RSSReader Internal Use
+#pragma mark - WundtLab Internal Use
 -(void)ensureSearchBarHeirarchy;
 @end
 

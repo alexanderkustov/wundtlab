@@ -17,7 +17,7 @@
  */
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public RSSReader APIs.
+#pragma mark Public WundtLab APIs.
 
 /**
  Tells the view to focus.

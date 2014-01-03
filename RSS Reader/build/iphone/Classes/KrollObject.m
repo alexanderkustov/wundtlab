@@ -302,10 +302,10 @@ bool KrollSetProperty(TiContextRef jsContext, TiObjectRef object, TiStringRef pr
 
 // forward declare these
 
-//@interface RSSReaderObject : NSObject
+//@interface WundtLabObject : NSObject
 //@end
 
-@interface RSSReaderObject (Private)
+@interface WundtLabObject (Private)
 -(NSDictionary*)modules;
 @end
 
@@ -323,9 +323,9 @@ void KrollPropertyNames(TiContextRef ctx, TiObjectRef object, TiPropertyNameAccu
 	{
 		id target = [o target];
 		
-		if ([o isKindOfClass:[RSSReaderObject class]])
+		if ([o isKindOfClass:[WundtLabObject class]])
 		{
-			for (NSString *key in [[(RSSReaderObject*)o modules] allKeys])
+			for (NSString *key in [[(WundtLabObject*)o modules] allKeys])
 			{
 				TiStringRef value = TiStringCreateWithUTF8CString([key UTF8String]);
 				TiPropertyNameAccumulatorAddName(propertyNames,value);

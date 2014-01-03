@@ -19,9 +19,9 @@
 
 #ifdef KROLL_COVERAGE
 # import "KrollCoverage.h"
-@interface RSSReaderObject : KrollCoverageObject {
+@interface WundtLabObject : KrollCoverageObject {
 #else
-@interface RSSReaderObject : KrollObject {
+@interface WundtLabObject : KrollObject {
 #endif
 @private
 	NSMutableDictionary *modules;
@@ -35,7 +35,7 @@
 -(TiModule*)moduleNamed:(NSString*)name context:(id<TiEvaluator>)context;
 @end
 
-extern NSString * RSSReader$ModuleRequireFormat;
+extern NSString * WundtLab$ModuleRequireFormat;
 
 @interface KrollBridge : Bridge<TiEvaluator,KrollDelegate> {
 @private
@@ -44,7 +44,7 @@ extern NSString * RSSReader$ModuleRequireFormat;
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	RSSReaderObject *_rssreader;
+	WundtLabObject *_wundtlab;
     KrollObject* console;
 	BOOL shutdown;
     BOOL evaluationError;

@@ -7,8 +7,8 @@
  * WARNING: This is generated code. Modify at your own risk and without support.
  */
 
-#ifndef RSSReader_ThirdpartyNS_h
-#define RSSReader_ThirdpartyNS_h
+#ifndef WundtLab_ThirdpartyNS_h
+#define WundtLab_ThirdpartyNS_h
 
 #ifndef __TI_NAMESPACE_PREFIX_
 #define __TI_NAMESPACE_PREFIX_	TI

@@ -11,7 +11,7 @@ xml.rss version: "2.0" do
         xml.description study.description
         xml.pubDate study.created_at.to_s(:rfc822)
         # xml.link study.presentation
-        xml.link ("http://localhost:3000/dist/preview_export/bespoke.html#" << study.presentation.to_s)
+        xml.link ("http://176.111.105.23:3000/dist/preview_export/bespoke.html#" << study.presentation.to_s)
         xml.guid study_url(study)
       end
     end

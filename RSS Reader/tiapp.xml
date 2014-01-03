@@ -9,13 +9,13 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <id>com.appcelerator.sample.rss</id>
-    <name>RSS Reader</name>
+    <id>com.inspiring.wundt.rss</id>
+    <name>WundtLab</name>
     <version>1.1.0</version>
-    <publisher>tlukasavage</publisher>
-    <url>http://appcelerator.com</url>
+    <publisher>inspiring.pt</publisher>
+    <url>http://inspiring.pt</url>
     <description>not specified</description>
-    <copyright>2011 by tlukasavage</copyright>
+    <copyright>2013</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>

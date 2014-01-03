@@ -7,14 +7,14 @@
 #define _QUOTEME(x) #x
 #define STRING(x) _QUOTEME(x)
 
-NSString * const TI_APPLICATION_DEPLOYTYPE = @"test";
-NSString * const TI_APPLICATION_ID = @"com.appcelerator.sample.rss";
-NSString * const TI_APPLICATION_PUBLISHER = @"tlukasavage";
-NSString * const TI_APPLICATION_URL = @"http://appcelerator.com";
-NSString * const TI_APPLICATION_NAME = @"RSS Reader";
+NSString * const TI_APPLICATION_DEPLOYTYPE = @"development";
+NSString * const TI_APPLICATION_ID = @"com.inspiring.wundt.rss";
+NSString * const TI_APPLICATION_PUBLISHER = @"inspiring.pt";
+NSString * const TI_APPLICATION_URL = @"http://inspiring.pt";
+NSString * const TI_APPLICATION_NAME = @"WundtLab";
 NSString * const TI_APPLICATION_VERSION = @"1.1.0";
 NSString * const TI_APPLICATION_DESCRIPTION = @"not specified";
-NSString * const TI_APPLICATION_COPYRIGHT = @"2011 by tlukasavage";
+NSString * const TI_APPLICATION_COPYRIGHT = @"2013";
 NSString * const TI_APPLICATION_GUID = @"5100dcf0-c738-485e-b558-448f768eec3c";
 BOOL const TI_APPLICATION_ANALYTICS = true;
 

@@ -1,0 +1,1 @@
+/Users/knuxus/Documents/rails/wundtlab/RSS Reader/Resources/ui/handheld/mobileweb/ApplicationWindow.js

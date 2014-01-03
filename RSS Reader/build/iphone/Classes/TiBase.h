@@ -60,7 +60,7 @@ extern "C" {
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for RSSReader Developer console
+// in simulator we redefine to format for WundtLab Developer console
 
 
 #define TI_INLINE static __inline__
@@ -309,13 +309,13 @@ void TiExceptionThrowWithNameAndReason(NSString *exceptionName, NSString *reason
 #define DEFINE_EXCEPTIONS \
 - (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = [@"org.rssreader." stringByAppendingString:NSStringFromClass([self class])];\
+	NSString * exceptionName = [@"org.wundtlab." stringByAppendingString:NSStringFromClass([self class])];\
 	TiExceptionThrowWithNameAndReason(exceptionName,reason,subreason,location);\
 }\
 \
 + (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = @"org.rssreader";\
+	NSString * exceptionName = @"org.wundtlab";\
 	TiExceptionThrowWithNameAndReason(exceptionName,reason,subreason,location);\
 }\
 
@@ -415,28 +415,28 @@ DebugLog(@"[WARN] Ti%@.%@ DEPRECATED in %@, in favor of %@.",@"tanium",api,in,ne
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UIRSSReaderNativeItemNone = -1, 
-	UIRSSReaderNativeItemSpinner = -2,
-	UIRSSReaderNativeItemProgressBar = -3,
+	UIWundtLabNativeItemNone = -1, 
+	UIWundtLabNativeItemSpinner = -2,
+	UIWundtLabNativeItemProgressBar = -3,
 	
-	UIRSSReaderNativeItemSlider = -4,
-	UIRSSReaderNativeItemSwitch = -5,
-	UIRSSReaderNativeItemMultiButton = -6,
-	UIRSSReaderNativeItemSegmented = -7,
+	UIWundtLabNativeItemSlider = -4,
+	UIWundtLabNativeItemSwitch = -5,
+	UIWundtLabNativeItemMultiButton = -6,
+	UIWundtLabNativeItemSegmented = -7,
 	
-	UIRSSReaderNativeItemTextView = -8,
-	UIRSSReaderNativeItemTextField = -9,
-	UIRSSReaderNativeItemSearchBar = -10,
+	UIWundtLabNativeItemTextView = -8,
+	UIWundtLabNativeItemTextField = -9,
+	UIWundtLabNativeItemSearchBar = -10,
 	
-	UIRSSReaderNativeItemPicker = -11,
-	UIRSSReaderNativeItemDatePicker = -12,
+	UIWundtLabNativeItemPicker = -11,
+	UIWundtLabNativeItemDatePicker = -12,
 	
-	UIRSSReaderNativeItemInfoLight = -13,
-	UIRSSReaderNativeItemInfoDark = -14,
+	UIWundtLabNativeItemInfoLight = -13,
+	UIWundtLabNativeItemInfoDark = -14,
 	
-	UIRSSReaderNativeItemDisclosure = -15,
+	UIWundtLabNativeItemDisclosure = -15,
 	
-	UIRSSReaderNativeItemContactAdd = -16
+	UIWundtLabNativeItemContactAdd = -16
 };
 
 
@@ -614,7 +614,7 @@ void incrementKrollCounter();
 void decrementKrollCounter();
     
 /**
- *	TiThreadPerformOnMainThread should replace all RSSReader instances of
+ *	TiThreadPerformOnMainThread should replace all WundtLab instances of
  *	performSelectorOnMainThread, ESPECIALLY if wait is to be yes. That way,
  *	exceptional-case main thread activities can process them outside of the
  *	standard event loop.

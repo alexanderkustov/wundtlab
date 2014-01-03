@@ -68,10 +68,10 @@
 {
 	switch((int)styleCache)
 	{
-		case UIRSSReaderNativeItemInfoLight:
-		case UIRSSReaderNativeItemInfoDark:
+		case UIWundtLabNativeItemInfoLight:
+		case UIWundtLabNativeItemInfoDark:
 			return 18;
-		case UIRSSReaderNativeItemDisclosure:
+		case UIWundtLabNativeItemDisclosure:
 			return 29;
 		default: {
 			break;
@@ -84,10 +84,10 @@
 {
 	switch((int)styleCache)
 	{
-		case UIRSSReaderNativeItemInfoLight:
-		case UIRSSReaderNativeItemInfoDark:
+		case UIWundtLabNativeItemInfoLight:
+		case UIWundtLabNativeItemInfoDark:
 			return 19;
-		case UIRSSReaderNativeItemDisclosure:
+		case UIWundtLabNativeItemDisclosure:
 			return 31;
 		default: {
 			break;
@@ -101,9 +101,9 @@
 {
 	switch ((int)styleCache)
 	{
-		case UIRSSReaderNativeItemInfoLight:
-		case UIRSSReaderNativeItemInfoDark:
-		case UIRSSReaderNativeItemDisclosure:
+		case UIWundtLabNativeItemInfoLight:
+		case UIWundtLabNativeItemInfoDark:
+		case UIWundtLabNativeItemDisclosure:
 			return suggestedResizing & ~(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		default: {
 			break;

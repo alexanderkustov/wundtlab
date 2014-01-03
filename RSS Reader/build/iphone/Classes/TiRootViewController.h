@@ -50,7 +50,7 @@
     BOOL statusBarVisibilityChanged;
 }
 
-//RSSReader Support
+//WundtLab Support
 -(CGRect)resizeView;
 -(void)repositionSubviews;
 -(UIView *)topWindowProxyView;

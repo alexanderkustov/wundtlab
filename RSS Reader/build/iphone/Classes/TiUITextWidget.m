@@ -243,7 +243,7 @@
     }
 }
 
-#pragma mark - RSSReader Internal Use Only
+#pragma mark - WundtLab Internal Use Only
 -(void)updateKeyboardStatus
 {
     if ( ([[[TiApp app] controller] keyboardVisible]) && ([[[TiApp app] controller] keyboardFocusedProxy] == [self proxy]) ) {
