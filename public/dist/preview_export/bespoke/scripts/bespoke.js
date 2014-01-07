@@ -1,13 +1,9 @@
-/*!
-* Bespoke.js v0.3.1
-*
-* Copyright 2013, Mark Dalgleish
-* This content is released under the MIT license
-* http://mit-license.org/markdalgleish
-*/
+var currentSlide;
+
 (function(moduleName, window) {
 
 	var clicks = new Array();
+
 
 	var from = function(selectorOrElement, selectedPlugins) {
 
@@ -23,6 +19,10 @@
 			}
 			console.log(parent.children);
 			console.log(slides);
+			var i = 0;
+
+
+
 			fire('deactivate', createEventData(activeSlide, customData));
 			activeSlide = slides[index];
 			slides.map(deactivate);
@@ -121,13 +121,18 @@ deck.parent.addEventListener('mousedown', function(e) {
 		if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
 			//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
 			clicks.push($(e.target).parent().parent().parent().attr('class') + " tempo: totalSeconds" );
+
 			//adicionar timer aqui
+			var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
+			
+			console.log("SLIDE NUMBER: " + numberSlide  + " of: " +  deck.slides.length );
+			console.log("cenas na ARRAY: " + clicks.toString());
+
 			deck.next();
 
-			//preciso de saber o ultimo slide para mostrar quantas vezes as classes clicadas foram accionadas
-			console.log("SLIDE NUMBER: " + "" + "of: " +  deck.slides.length );
-			console.log("cenas na array: " + clicks.toString());
-
+			if(numberSlide == deck.slides.length)
+				alert("chegou ao final");
+			
 
 		}
 
