@@ -124,7 +124,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 
 			//adicionar timer aqui
 			var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
-			
+
 			console.log("SLIDE NUMBER: " + numberSlide  + " of: " +  deck.slides.length );
 			console.log("cenas na ARRAY: " + clicks.toString());
 
@@ -132,7 +132,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 
 			if(numberSlide == deck.slides.length)
 				alert("chegou ao final");
-			
+				//mandar aqui o post para rails
 		}
 
 });

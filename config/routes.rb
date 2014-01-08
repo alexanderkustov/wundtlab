@@ -1,5 +1,8 @@
 Wundt::Application.routes.draw do
   
+  resources :results
+
+
   resources :studies
 
 
