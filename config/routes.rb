@@ -10,10 +10,11 @@ Wundt::Application.routes.draw do
   # mas o get bloqueio para nunca verem o for  de dentro da gem e assim consigo passar a lógica pelo meu controller
   # get "/auth/identity/register", to: "users#new"
   get "/auth/failure" => "sessions#new"
+  get 'studies/strut/:id' => "studies#strut"
   get "/auth/identity/register" => "users#new"
   match '/auth/:provider/callback', to: 'sessions#create' #omniauth route
   match '/signup', to: 'users#new'
-  
+
   match '/login', to: 'sessions#new'
   match '/logout', to: 'sessions#destroy'
   resources :users #needed by omniauth-identity

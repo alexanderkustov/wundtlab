@@ -133,7 +133,6 @@ deck.parent.addEventListener('mousedown', function(e) {
 			if(numberSlide == deck.slides.length)
 				alert("chegou ao final");
 			
-
 		}
 
 });

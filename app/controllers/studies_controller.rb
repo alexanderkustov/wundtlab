@@ -16,6 +16,10 @@ class StudiesController < ApplicationController
     end
   end
 
+  def strut
+    @study = Study.find(params[:id])
+  end
+
   # GET /studies/new
   # GET /studies/new.json
   def new
