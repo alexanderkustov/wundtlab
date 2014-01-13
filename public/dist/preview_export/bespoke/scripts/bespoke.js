@@ -110,10 +110,7 @@ var currentSlide;
 	},
 	makePluginForAxis = function(axis) {
 		return function(deck) {
-			var startPosition,
-			delta;
-
-
+			var startPosition, delta;
 //mouse down positioning and counting method
 deck.parent.addEventListener('mousedown', function(e) {
 
@@ -130,47 +127,43 @@ deck.parent.addEventListener('mousedown', function(e) {
 
 			deck.next();
 
-			if(numberSlide == deck.slides.length)
+			if(numberSlide == deck.slides.length){
 				alert("chegou ao final");
-				//mandar aqui o post para rails
 
-				//Se for submitod por um botão fazer disable no botão aqui e enable no success e error.
-//N esquecer de var that = this para aceder dentro do ajax ao botão.
-$.ajax({
-  //GET, PUT, DELETE
-  type: 'POST',
-  dataType: 'json',
-  // URL + route do resource
-  url: "http://localhost:3000"+"/results",
-  data: {
-    format: "json",
-    // result: "clicks.toString()",
-    // Pode ser um array tal que:
-    reult: {study: "1", results: "value"}
-    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
-    // Resource.create(params[:resource])
-  },
-  success: function(data, textStatus, jqXHR) {
-    //Atenção se dá erro circular
-    console.log("Response "+JSON.stringify(data)); 
-    //No hash envio um campo success a true ou false para dizer se correu tudo bem no servidor
-    if(data.success) { 
-        //Fazer cenas
-        console.log("Sucesso");
-        console.log(data.message);
-        console.log(data.resource);
-      }else{
-        //Fazer cenas
-        console.log("Insucesso");
-        console.log(data.message);
-      }
-    },
-  error: function(jqXHR, textStatus, errorThrown) {
-    console.log("Erro comunicação");
-  }
-});
-				
-		}
+				$.ajax({
+				  //GET, PUT, DELETE
+				  type: 'POST',
+				  dataType: 'json',
+				  // URL + route do resource
+				  url: "http://localhost:3000"+"/results",
+				  data: {
+				  	format: "json",
+				    // result: "clicks.toString()",
+				    // Pode ser um array tal que:
+				    reult: {study: "1", results: "value"}
+				    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
+				    // Resource.create(params[:resource])
+				},
+				success: function(data, textStatus, jqXHR) {
+					    //Atenção se dá erro circular
+					    console.log("Response "+JSON.stringify(data)); 
+					    //No hash envio um campo success a true ou false para dizer se correu tudo bem no servidor
+					    if(data.success) { 
+					        //Fazer cenas
+					        console.log("Sucesso");
+					        console.log(data.message);
+					        console.log(data.resource);
+					    }else{
+					        //Fazer cenas
+					        console.log("Insucesso");
+					        console.log(data.message);
+					    }
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						console.log("Erro comunicação");
+					}
+				});
+}
 
 });
 
@@ -181,13 +174,13 @@ document.addEventListener('keydown', function(e) {
 		axis == 'X' && e.which == 39 || // RIGHT
 		axis == 'Y' && e.which == 40 // BOTTOM
 		) && deck.next();
-			(
+	(
 		e.which == 33 || // PAGE UP
 		axis == 'X' && e.which == 37 || // LEFT
 		axis == 'Y' && e.which == 38 // TOP
 		) && deck.prev();
 
-	});
+});
 
 //touchevents
 deck.parent.addEventListener('touchstart', function(e) {
