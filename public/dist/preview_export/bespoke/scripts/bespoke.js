@@ -133,6 +133,43 @@ deck.parent.addEventListener('mousedown', function(e) {
 			if(numberSlide == deck.slides.length)
 				alert("chegou ao final");
 				//mandar aqui o post para rails
+
+				//Se for submitod por um botão fazer disable no botão aqui e enable no success e error.
+//N esquecer de var that = this para aceder dentro do ajax ao botão.
+$.ajax({
+  //GET, PUT, DELETE
+  type: 'POST',
+  dataType: 'json',
+  // URL + route do resource
+  url: "http://localhost:3000"+"/results",
+  data: {
+    format: "json",
+    // result: "clicks.toString()",
+    // Pode ser um array tal que:
+    reult: {study: "1", results: "value"}
+    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
+    // Resource.create(params[:resource])
+  },
+  success: function(data, textStatus, jqXHR) {
+    //Atenção se dá erro circular
+    console.log("Response "+JSON.stringify(data)); 
+    //No hash envio um campo success a true ou false para dizer se correu tudo bem no servidor
+    if(data.success) { 
+        //Fazer cenas
+        console.log("Sucesso");
+        console.log(data.message);
+        console.log(data.resource);
+      }else{
+        //Fazer cenas
+        console.log("Insucesso");
+        console.log(data.message);
+      }
+    },
+  error: function(jqXHR, textStatus, errorThrown) {
+    console.log("Erro comunicação");
+  }
+});
+				
 		}
 
 });
