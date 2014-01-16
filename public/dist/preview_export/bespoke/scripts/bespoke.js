@@ -127,7 +127,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 
 			deck.next();
 
-			if(numberSlide == deck.slides.length){
+			if(numberSlide == deck.slides.length -1){
 				alert("chegou ao final");
 
 				$.ajax({
@@ -140,7 +140,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 				  	format: "json",
 				    // result: "clicks.toString()",
 				    // Pode ser um array tal que:
-				    reult: {study: "1", results: "value"}
+				    results: {study: "2", results: "value"}
 				    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
 				    // Resource.create(params[:resource])
 				},
@@ -164,9 +164,9 @@ deck.parent.addEventListener('mousedown', function(e) {
 					}
 				});
 }
+}
 
 });
-
 document.addEventListener('keydown', function(e) {
 	(
 		e.which == 34 || // PAGE DOWN
