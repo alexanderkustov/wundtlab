@@ -140,7 +140,11 @@ deck.parent.addEventListener('mousedown', function(e) {
 				  	format: "json",
 				    // result: "clicks.toString()",
 				    // Pode ser um array tal que:
-				    result: {study_id: "2", results: "value"}
+				    result: {
+				    	study_id: '2',
+				    	results: 'xpto'
+				    }
+
 				    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
 				    // Resource.create(params[:resource])
 				},
