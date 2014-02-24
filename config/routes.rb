@@ -1,5 +1,7 @@
 Wundt::Application.routes.draw do
   
+  match '/hello', to: 'pages#hello'
+
   resources :results
 
 
