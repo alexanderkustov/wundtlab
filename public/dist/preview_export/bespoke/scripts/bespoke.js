@@ -114,7 +114,7 @@ var currentSlide;
 //mouse down positioning and counting method
 var answers = {};
 deck.parent.addEventListener('mousedown', function(e) {
-
+		var element = $(e.target).parent().parent().parent();
 		//console.log($(e.target).parent().parent().parent().attr('class'));
 		// if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
 		// 	//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
@@ -124,9 +124,12 @@ deck.parent.addEventListener('mousedown', function(e) {
 			$.each( classList, function(index, item){
 			    if (item != 'componentContainer' && item != 'clickable') {
 			    	var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
-			    	console.log(numberSlide);
-			    	key = "s_"+numberSlide;
-			    	answers[key] = {answear: item, time: responseTime()};
+			    	answers.push({
+			    		slide:numberSlide,
+			    		answear:item,
+			    		time:responseTime()
+			    	});
+			    	// answers[key] = {answear: item, time: responseTime()};
 			    	console.log(answers);
 			    }
 			});
