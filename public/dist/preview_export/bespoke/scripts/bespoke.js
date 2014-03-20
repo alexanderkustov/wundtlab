@@ -112,7 +112,7 @@ var currentSlide;
 		return function(deck) {
 			var startPosition, delta;
 //mouse down positioning and counting method
-var answers = {};
+var answers = [];
 deck.parent.addEventListener('mousedown', function(e) {
 		var element = $(e.target).parent().parent().parent();
 		//console.log($(e.target).parent().parent().parent().attr('class'));
@@ -124,12 +124,13 @@ deck.parent.addEventListener('mousedown', function(e) {
 			$.each( classList, function(index, item){
 			    if (item != 'componentContainer' && item != 'clickable') {
 			    	var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
+			    	time = responseTime();
 			    	answers.push({
 			    		slide:numberSlide,
-			    		answear:item,
-			    		time:responseTime()
+			    		answer:item,
+			    		time:time
 			    	});
-			    	// answers[key] = {answear: item, time: responseTime()};
+			    	// answers[key] = {answer: item, time: responseTime()};
 			    	console.log(answers);
 			    }
 			});
@@ -143,8 +144,6 @@ deck.parent.addEventListener('mousedown', function(e) {
 			deck.next();
 
 			if(numberSlide == deck.slides.length -1){
-				// alert("chegou ao final");
-
 				$.ajax({
 				  type: 'POST',
 				  dataType: 'json',
@@ -152,8 +151,8 @@ deck.parent.addEventListener('mousedown', function(e) {
 				  data: {
 				  	format: "json",
 				    result: {
-				    	study_id: '2',
-				    	results: 'xpto'
+				    	study_id: '3',
+				    	results: JSON.stringify(answers)
 				    }
 				},
 				success: function(data, textStatus, jqXHR) {

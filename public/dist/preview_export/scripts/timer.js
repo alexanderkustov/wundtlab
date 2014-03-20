@@ -8,11 +8,11 @@ function initTimer(){
 function responseTime(){
 	now = new Date().getTime();
 	if (lastTime) {
-		responseTime = (now-lastTime)/1000;
+		time = (now-lastTime)/1000;
 		lastTime = now;
 	} else{
-		responseTime = (now-timer)/1000;
+		time = (now-timer)/1000;
 		lastTime = now;
 	}
-	return responseTime;
+	return time;
 }
