@@ -112,7 +112,7 @@ var currentSlide;
 		return function(deck) {
 			var startPosition, delta;
 //mouse down positioning and counting method
-var answears = {};
+var answers = {};
 deck.parent.addEventListener('mousedown', function(e) {
 
 		//console.log($(e.target).parent().parent().parent().attr('class'));
@@ -126,8 +126,8 @@ deck.parent.addEventListener('mousedown', function(e) {
 			    	var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
 			    	console.log(numberSlide);
 			    	key = "s_"+numberSlide;
-			    	answears[key] = {answear: item, time: responseTime()};
-			    	console.log(answears);
+			    	answers[key] = {answear: item, time: responseTime()};
+			    	console.log(answers);
 			    }
 			});
 
@@ -135,7 +135,7 @@ deck.parent.addEventListener('mousedown', function(e) {
 			var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
 
 			console.log("SLIDE NUMBER: " + numberSlide  + " of: " +  deck.slides.length );
-			console.log("cenas na ARRAY: " + JSON.stringify(answears));
+			console.log("cenas na ARRAY: " + JSON.stringify(answers));
 
 			deck.next();
 
