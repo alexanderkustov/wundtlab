@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="../styles/custom.css">
 	<script src="scripts/jquery.min.js" ></script>
 	<script src="scripts/LAB.min.js" ></script>
+	<script src="scripts/timer.js" ></script>
 	<script type="text/javascript">
 		$LAB
 		.script("scripts/onready.js").wait()
@@ -31,8 +32,7 @@
 			if(bespoke){
 				bespoke.horizontal.from('article');
 				$(".startButton").hide();
-				// var totalSeconds = 0;
-	        	// setInterval( function(){++sec;}, 1000);
+				initTimer();
 	        }
 	    }
 	</script>

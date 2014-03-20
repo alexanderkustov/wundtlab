@@ -7,7 +7,7 @@ var currentSlide;
 
 	var from = function(selectorOrElement, selectedPlugins) {
 
-		console.log(selectorOrElement);
+		// console.log(selectorOrElement);
 
 		var parent = selectorOrElement.blur ? selectorOrElement : document.querySelector(selectorOrElement),
 		slides = [].slice.call( document.querySelector('article').children, 0),
@@ -17,8 +17,8 @@ var currentSlide;
 			if (!slides[index]) {
 				return;
 			}
-			console.log(parent.children);
-			console.log(slides);
+			// console.log(parent.children);
+			// console.log(slides);
 			var i = 0;
 
 
@@ -112,53 +112,54 @@ var currentSlide;
 		return function(deck) {
 			var startPosition, delta;
 //mouse down positioning and counting method
+var answears = {};
 deck.parent.addEventListener('mousedown', function(e) {
 
 		//console.log($(e.target).parent().parent().parent().attr('class'));
-		if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
-			//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
-			clicks.push($(e.target).parent().parent().parent().attr('class') + " tempo: totalSeconds" );
+		// if ($(e.target).parent().parent().parent().hasClass('componentContainer')) {
+		// 	//preciso de registrar o nome das classes clicadas, criar uma array que depois apareca no final
+		// 	clicks.push($(e.target).parent().parent().parent().attr('class') + " tempo: totalSeconds" );
+		if (element.hasClass('clickable')) {
+			var classList = element.attr('class').split(/\s+/);
+			$.each( classList, function(index, item){
+			    if (item != 'componentContainer' && item != 'clickable') {
+			    	var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
+			    	console.log(numberSlide);
+			    	key = "s_"+numberSlide;
+			    	answears[key] = {answear: item, time: responseTime()};
+			    	console.log(answears);
+			    }
+			});
 
 			//adicionar timer aqui
 			var numberSlide = $(".bespoke-parent > section").index($(".bespoke-parent > .bespoke-active")) + 1;
 
 			console.log("SLIDE NUMBER: " + numberSlide  + " of: " +  deck.slides.length );
-			console.log("cenas na ARRAY: " + clicks.toString());
+			console.log("cenas na ARRAY: " + JSON.stringify(answears));
 
 			deck.next();
 
 			if(numberSlide == deck.slides.length -1){
-				alert("chegou ao final");
+				// alert("chegou ao final");
 
 				$.ajax({
-				  //GET, PUT, DELETE
 				  type: 'POST',
 				  dataType: 'json',
-				  // URL + route do resource
 				  url: "http://localhost:3000"+"/results",
 				  data: {
 				  	format: "json",
-				    // result: "clicks.toString()",
-				    // Pode ser um array tal que:
 				    result: {
 				    	study_id: '2',
 				    	results: 'xpto'
 				    }
-
-				    // Fazendo matching dos campos do resource no backend para ele construir em 1 linha
-				    // Resource.create(params[:resource])
 				},
 				success: function(data, textStatus, jqXHR) {
-					    //Atenção se dá erro circular
 					    console.log("Response "+JSON.stringify(data)); 
-					    //No hash envio um campo success a true ou false para dizer se correu tudo bem no servidor
 					    if(data.success) { 
-					        //Fazer cenas
 					        console.log("Sucesso");
 					        console.log(data.message);
 					        console.log(data.resource);
 					    }else{
-					        //Fazer cenas
 					        console.log("Insucesso");
 					        console.log(data.message);
 					    }
@@ -171,37 +172,37 @@ deck.parent.addEventListener('mousedown', function(e) {
 }
 
 });
-document.addEventListener('keydown', function(e) {
-	(
-		e.which == 34 || // PAGE DOWN
-		e.which == 32 || // SPACE
-		axis == 'X' && e.which == 39 || // RIGHT
-		axis == 'Y' && e.which == 40 // BOTTOM
-		) && deck.next();
-	(
-		e.which == 33 || // PAGE UP
-		axis == 'X' && e.which == 37 || // LEFT
-		axis == 'Y' && e.which == 38 // TOP
-		) && deck.prev();
+// document.addEventListener('keydown', function(e) {
+// 	(
+// 		e.which == 34 || // PAGE DOWN
+// 		e.which == 32 || // SPACE
+// 		axis == 'X' && e.which == 39 || // RIGHT
+// 		axis == 'Y' && e.which == 40 // BOTTOM
+// 		) && deck.next();
+// 	(
+// 		e.which == 33 || // PAGE UP
+// 		axis == 'X' && e.which == 37 || // LEFT
+// 		axis == 'Y' && e.which == 38 // TOP
+// 		) && deck.prev();
 
-});
+// });
 
 //touchevents
-deck.parent.addEventListener('touchstart', function(e) {
-	if (e.touches.length == 1) {
-		startPosition = e.touches[0]['page' + axis];
-		delta = 0;
-	}
-});
-deck.parent.addEventListener('touchmove', function(e) {
-	if (e.touches.length == 1) {
-		e.preventDefault();
-		delta = e.touches[0]['page' + axis] - startPosition;
-	}
-});
-deck.parent.addEventListener('touchend', function() {
-	Math.abs(delta) > 50 && (delta > 0 ? deck.prev() : deck.next());
-});
+// deck.parent.addEventListener('touchstart', function(e) {
+// 	if (e.touches.length == 1) {
+// 		startPosition = e.touches[0]['page' + axis];
+// 		delta = 0;
+// 	}
+// });
+// deck.parent.addEventListener('touchmove', function(e) {
+// 	if (e.touches.length == 1) {
+// 		e.preventDefault();
+// 		delta = e.touches[0]['page' + axis] - startPosition;
+// 	}
+// });
+// deck.parent.addEventListener('touchend', function() {
+// 	Math.abs(delta) > 50 && (delta > 0 ? deck.prev() : deck.next());
+// });
 };
 },
 plugins = {
